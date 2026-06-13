@@ -46,7 +46,7 @@ TruthLens AI/
 
 ### Prerequisites
 - Python 3.10+
-- OpenAI API key
+- OpenRouter API key (https://openrouter.ai/keys - free models available)
 - Tavily API key (for web search)
 
 ### Installation
@@ -74,7 +74,7 @@ pip install -r requirements.txt
 cp .env.example .env
 
 # Edit .env and add your API keys
-# OPENAI_API_KEY=your_key_here
+# OPENROUTER_API_KEY=your_key_here
 # TAVILY_API_KEY=your_key_here
 ```
 
@@ -140,10 +140,10 @@ Publish    Writer/Editor Revise
 
 ## 🔧 API Keys Setup
 
-### OpenAI API
-1. Go to https://platform.openai.com/api-keys
-2. Create a new secret key
-3. Add to `.env`: `OPENAI_API_KEY=sk-...`
+### OpenRouter API
+1. Go to https://openrouter.ai/keys
+2. Create a new API key (free tier available with free models)
+3. Add to `.env`: `OPENROUTER_API_KEY=sk-or-...`
 
 ### Tavily API
 1. Go to https://tavily.com
@@ -205,8 +205,8 @@ Edit agent files to customize:
 
 ### API Key Issues
 ```
-❌ Error: OPENAI_API_KEY not set
-→ Check .env file has OPENAI_API_KEY with a valid key
+❌ Error: OPENROUTER_API_KEY not set
+→ Check .env file has OPENROUTER_API_KEY with a valid key
 ```
 
 ### Web Search Not Working
@@ -216,14 +216,14 @@ Edit agent files to customize:
 ```
 
 ### Rate Limiting
-- OpenAI has rate limits. If you hit them, wait a moment and try again
-- For heavy use, consider upgrading your OpenAI tier
+- OpenRouter has rate limits. If you hit them, wait a moment and try again
+- Free models have lower limits; consider paid models for heavy use
 
 ## 📦 Dependencies
 
 - **langgraph**: Multi-agent orchestration
 - **langchain**: LLM framework and tools
-- **langchain-openai**: OpenAI integration
+- **langchain-openai**: OpenRouter integration (OpenAI-compatible API)
 - **tavily-python**: Web search API
 - **python-dotenv**: Environment variable management
 - **pydantic**: Data validation
