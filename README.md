@@ -70,8 +70,6 @@ pip install -r requirements.txt
 
 4. **Configure environment**
 ```bash
-# Copy .env.example to .env
-cp .env.example .env
 
 # Edit .env and add your API keys
 # OPENROUTER_API_KEY=your_key_here
